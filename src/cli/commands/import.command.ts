@@ -1,4 +1,6 @@
-import { TSVFileReader } from '../../shared/libs/tsv-file-reader.js';
+import { getErrorMessage } from '../../shared/helpers/common.js';
+import { createOffer } from '../../shared/helpers/offer.js';
+import { TSVFileReader } from '../../shared/libs/file-reader/tsv-file-reader.js';
 import { Command } from './command.interface.js';
 
 export class ImportCommand implements Command {
@@ -6,20 +8,31 @@ export class ImportCommand implements Command {
     return '--import';
   }
 
-  public execute(...parameters: string[]): void {
+  private onImportedLine(line: string) {
+    const offer = createOffer(line);
+    console.info(offer);
+  }
+
+  private onCompleteImport(count: number) {
+    console.info(`${count} rows imported.`);
+  }
+
+  public async execute(...parameters: string[]): Promise<void> {
     const [fileName] = parameters;
     const fileReader = new TSVFileReader(fileName.trim());
 
-    try {
-      fileReader.read();
-      console.log(fileReader.toArray());
-    } catch (err) {
-      if (!(err instanceof Error)) {
-        throw err;
-      }
+    fileReader.on('line', this.onImportedLine);
+    fileReader.on('end', this.onCompleteImport);
+    fileReader.on('error', (err) => {
+      console.error(`Ошибка при чтении файла ${fileName}:`, err);
+      process.exit(1);
+    });
 
+    try {
+      await fileReader.read();
+    } catch (err) {
       console.error(`Can't import data from file: ${fileName}`);
-      console.error(`Details: ${err.message}`);
+      console.error(getErrorMessage(err));
     }
   }
 }
