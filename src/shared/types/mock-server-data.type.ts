@@ -1,20 +1,20 @@
-import { Amenity } from "./AmenityType.js";
-import { Coordinates } from "./CoordinatesType.js";
-import { Housing } from "./HousingType.js";
-import { RentalCity } from "./RentalCityType.js";
-import { User } from "./UserType.js";
+import { Amenity } from './amenity.type.js';
+import { ApartmentType } from './apartment-type.enum.js';
+import { Coordinates } from './coordinates.type.js';
+import { TownType } from './town-type.enum.js';
+import { User } from './user.type.js';
 
 export type MockServerData = {
   titles: string[];
   descriptions: string[];
   dates: Date[];
-  cities: RentalCity[];
+  towns: TownType[];
   images: string[];
   galleries: Array<string[]>;
   isPremium: boolean[];
   isFavorite: boolean[];
   ratings: number[];
-  housingTypes: Housing[];
+  apartmentTypes: ApartmentType[];
   roomCounts: number[];
   guestCounts: number[];
   costs: number[];
