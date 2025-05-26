@@ -7,6 +7,8 @@ import {
 } from './index.js';
 import { types } from '@typegoose/typegoose';
 import { Component } from '../../types/index.js';
+import { Controller } from '../../libs/rest/index.js';
+import OfferController from './offer.controller.js';
 import {
   OfferSummaryEntity,
   OfferSummaryModel,
@@ -20,4 +22,8 @@ export function createOfferContainer(container: Container) {
   container
     .bind<types.ModelType<OfferSummaryEntity>>(Component.OfferSummaryModel)
     .toConstantValue(OfferSummaryModel);
+  container
+    .bind<Controller>(Component.OfferController)
+    .to(OfferController)
+    .inSingletonScope();
 }
