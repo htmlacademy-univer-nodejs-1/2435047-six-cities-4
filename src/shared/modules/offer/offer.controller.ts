@@ -3,6 +3,7 @@ import { Component } from '../../types/component.enum.js';
 import {
   BaseController,
   HttpError,
+  DocumentExistsMiddleware,
   HttpMethod,
 } from '../../libs/rest/index.js';
 import { Logger } from '../../libs/logger/index.js';
@@ -55,7 +56,10 @@ export default class OfferController extends BaseController {
       path: '/:offerId',
       method: HttpMethod.Get,
       handler: this.getOfferById,
-      middlewares: [new ValidateObjectIdMiddleware('offerId')],
+      middlewares: [
+        new ValidateObjectIdMiddleware('offerId'),
+        new DocumentExistsMiddleware(this.offerService, 'Offer', 'offerId'),
+      ],
     });
 
     this.addRoute({
@@ -65,6 +69,7 @@ export default class OfferController extends BaseController {
       middlewares: [
         new ValidateObjectIdMiddleware('offerId'),
         new ValidateDtoMiddleware(UpdateOfferDto),
+        new DocumentExistsMiddleware(this.offerService, 'Offer', 'offerId'),
       ],
     });
 
@@ -72,7 +77,10 @@ export default class OfferController extends BaseController {
       path: '/:offerId',
       method: HttpMethod.Delete,
       handler: this.deleteOffer,
-      middlewares: [new ValidateObjectIdMiddleware('offerId')],
+      middlewares: [
+        new ValidateObjectIdMiddleware('offerId'),
+        new DocumentExistsMiddleware(this.offerService, 'Offer', 'offerId'),
+      ],
     });
 
     this.addRoute({
@@ -91,21 +99,30 @@ export default class OfferController extends BaseController {
       path: '/:offerId/favorite',
       method: HttpMethod.Post,
       handler: this.addToFavourites,
-      middlewares: [new ValidateObjectIdMiddleware('offerId')],
+      middlewares: [
+        new ValidateObjectIdMiddleware('offerId'),
+        new DocumentExistsMiddleware(this.offerService, 'Offer', 'offerId'),
+      ],
     });
 
     this.addRoute({
       path: '/:offerId/favorite',
       method: HttpMethod.Delete,
       handler: this.removeFromFavourites,
-      middlewares: [new ValidateObjectIdMiddleware('offerId')],
+      middlewares: [
+        new ValidateObjectIdMiddleware('offerId'),
+        new DocumentExistsMiddleware(this.offerService, 'Offer', 'offerId'),
+      ],
     });
 
     this.addRoute({
       path: '/:offerId/comments',
       method: HttpMethod.Get,
       handler: this.getComments,
-      middlewares: [new ValidateObjectIdMiddleware('offerId')],
+      middlewares: [
+        new ValidateObjectIdMiddleware('offerId'),
+        new DocumentExistsMiddleware(this.offerService, 'Offer', 'offerId'),
+      ],
     });
   }
 
