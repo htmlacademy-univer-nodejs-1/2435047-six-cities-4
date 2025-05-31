@@ -1,10 +1,11 @@
-import { ArrayMaxSize, ArrayMinSize, ArrayNotEmpty, IsArray, IsDateString, IsEnum, IsIn, IsMongoId, IsNumber, IsString, Max, MaxLength, Min, MinLength, Validate } from 'class-validator';
+import { ArrayMaxSize, ArrayMinSize, ArrayNotEmpty, IsArray, IsDateString, IsEnum, IsIn, IsNumber, IsString, Max, MaxLength, Min, MinLength, Validate } from 'class-validator';
 import { Amenity } from '../../../types/amenity.type.js';
 import { ApartmentType } from '../../../types/apartment-type.enum.js';
 import { TownType } from '../../../types/town-type.enum.js';
 import { AMENITY_VALUES } from '../../../types/index.js';
 import { MaxDecimalPlaces } from '../../../helpers/validators.js';
 import { CreateOfferValidationMessage } from './create-offer.messages.js';
+import { Coordinates } from '../../../types/coordinates.type.js';
 
 export class CreateOfferDto {
   @MinLength(10, { message: CreateOfferValidationMessage.title.minLength })
@@ -75,6 +76,9 @@ export class CreateOfferDto {
   })
   public amenities!: Amenity[];
 
-  @IsMongoId({ message: CreateOfferValidationMessage.userId.invalidId })
   public userId!: string;
+
+  public commentCount!: number;
+
+  public coordinates!: Coordinates;
 }
