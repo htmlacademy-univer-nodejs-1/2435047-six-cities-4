@@ -9,6 +9,7 @@ import { TownType } from '../../types/town-type.enum.js';
 import { ApartmentType } from '../../types/index.js';
 import { Amenity } from '../../types/amenity.type.js';
 import { UserEntity } from '../user/user.entity.js';
+import { Coordinates } from '../../types/coordinates.type.js';
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-declaration-merging
 export interface OfferEntity extends defaultClasses.Base { }
@@ -70,7 +71,10 @@ export class OfferEntity extends defaultClasses.TimeStamps {
 
   @prop()
   public commentCount!: number;
-  
+
+  @prop()
+  public coordinates!: Coordinates;
+
   @prop({
     ref: UserEntity,
     required: true,
