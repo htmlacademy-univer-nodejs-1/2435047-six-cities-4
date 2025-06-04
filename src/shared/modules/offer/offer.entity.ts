@@ -1,10 +1,4 @@
-import {
-  defaultClasses,
-  getModelForClass,
-  modelOptions,
-  prop,
-  Ref,
-} from '@typegoose/typegoose';
+import { defaultClasses, getModelForClass, modelOptions, prop, Ref } from '@typegoose/typegoose';
 import { TownType } from '../../types/town-type.enum.js';
 import { ApartmentType } from '../../types/index.js';
 import { Amenity } from '../../types/amenity.type.js';

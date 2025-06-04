@@ -4,10 +4,7 @@ import { Component } from '../../types/component.enum.js';
 import { CommentEntity } from './comment.entity.js';
 import { types } from '@typegoose/typegoose';
 import { CreateCommentDto } from './dto/create-comment.dto.js';
-import {
-  DEFAULT_COMMENT_LIMIT,
-  DEFAULT_COMMENT_MAX_LIMIT,
-} from './comment.constant.js';
+import { DEFAULT_COMMENT_LIMIT, DEFAULT_COMMENT_MAX_LIMIT } from './comment.constant.js';
 
 @injectable()
 export class DefaultCommentService implements CommentService {

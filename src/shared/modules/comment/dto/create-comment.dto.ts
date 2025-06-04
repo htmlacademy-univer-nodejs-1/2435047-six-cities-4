@@ -1,12 +1,4 @@
-import {
-  IsDateString,
-  IsMongoId,
-  IsNumber,
-  IsString,
-  Length,
-  Max,
-  Min,
-} from 'class-validator';
+import { IsDateString, IsMongoId, IsNumber, IsString, Length, Max, Min } from 'class-validator';
 import { CreateCommentMessages } from './create-comment.messages.js';
 
 export class CreateCommentDto {

@@ -9,10 +9,7 @@ import { types } from '@typegoose/typegoose';
 import { Component } from '../../types/index.js';
 import { Controller } from '../../libs/rest/index.js';
 import OfferController from './offer.controller.js';
-import {
-  OfferSummaryEntity,
-  OfferSummaryModel,
-} from './offerSummary.entity.js';
+import { OfferSummaryEntity, OfferSummaryModel } from './offerSummary.entity.js';
 import { FavoriteEntity, FavoriteModel } from '../favotite/favorite.entity.js';
 
 export function createOfferContainer(container: Container) {

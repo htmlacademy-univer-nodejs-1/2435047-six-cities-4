@@ -1,11 +1,5 @@
 import { inject, injectable } from 'inversify';
-import {
-  BaseController,
-  UploadFileMiddleware,
-  ValidateObjectIdMiddleware,
-  HttpError,
-  HttpMethod,
-} from '../../libs/rest/index.js';
+import { BaseController, UploadFileMiddleware, ValidateObjectIdMiddleware, HttpError, HttpMethod } from '../../libs/rest/index.js';
 import { Component } from '../../types/index.js';
 import { Logger } from '../../libs/logger/index.js';
 import { CreateUserRequest } from './create-user-request.type.js';
