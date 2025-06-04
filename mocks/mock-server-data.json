@@ -1,174 +1,215 @@
 {
   "api": {
     "titles": [
-      "Уютная студия в центре",
-      "Просторная однокомнатная квартира",
-      "Двухкомнатная квартира с видом на парк",
-      "Трёхкомнатный пентхаус",
-      "Роскошный дом у озера"
+      "Modern Loft in Berlin",
+      "Cozy Apartment in Paris",
+      "Luxury Hotel in Amsterdam",
+      "Seaside Villa in Barcelona",
+      "Charming Cottage in Rome"
     ],
     "descriptions": [
-      "Сдаётся студия площадью 25 м² в шаговой доступности от метро.",
-      "Однокомнатная квартира с современным ремонтом и всей необходимой техникой.",
-      "Двухкомнатная квартира на последнем этаже с видом на городской парк.",
-      "Пентхаус с панорамными окнами, террасой и двумя санузлами.",
-      "Дом 200 м² на берегу озера, собственный причал и барбекю-зона."
+      "Spacious loft with a great city view",
+      "Beautiful apartment in the heart of Paris",
+      "5-star hotel with great service",
+      "Luxurious villa with a private pool",
+      "Cozy cottage surrounded by nature"
     ],
     "dates": [
-      "2025-01-10T12:00:00.000Z",
-      "2025-02-14T08:30:00.000Z",
-      "2025-03-20T16:45:00.000Z",
-      "2025-04-05T09:15:00.000Z",
-      "2025-04-30T19:00:00.000Z"
+      "2025-02-12",
+      "2025-02-13",
+      "2025-02-14",
+      "2025-02-15",
+      "2025-02-16"
     ],
-    "cities": [
-      "Paris",
+    "towns": [
       "Cologne",
-      "Brussels",
+      "Paris",
       "Amsterdam",
+      "Brussels",
       "Hamburg",
       "Dusseldorf"
     ],
     "images": [
-      "https://example.com/images/house0.jpg",
-      "https://example.com/images/house1.jpg",
-      "https://example.com/images/house2.jpg",
-      "https://example.com/images/house3.jpg",
-      "https://example.com/images/house4.jpg",
-      "https://example.com/images/house5.jpg"
+      "image3.jpg",
+      "image1.jpg",
+      "image2.jpg",
+      "image4.jpg",
+      "image5.jpg"
     ],
     "galleries": [
       [
-        "https://example.com/gallery/0_1.jpg",
-        "https://example.com/gallery/0_2.jpg",
-        "https://example.com/gallery/0_3.jpg",
-        "https://example.com/gallery/0_4.jpg",
-        "https://example.com/gallery/0_5.jpg",
-        "https://example.com/gallery/0_6.jpg"
+        "img1.jpg",
+        "img2.jpg",
+        "img3.jpg",
+        "img4.jpg",
+        "img5.jpg",
+        "img6.jpg"
       ],
       [
-        "https://example.com/gallery/1_1.jpg",
-        "https://example.com/gallery/1_2.jpg",
-        "https://example.com/gallery/1_3.jpg",
-        "https://example.com/gallery/1_4.jpg",
-        "https://example.com/gallery/1_5.jpg",
-        "https://example.com/gallery/1_6.jpg"
+        "img7.jpg",
+        "img8.jpg",
+        "img9.jpg",
+        "img10.jpg",
+        "img11.jpg",
+        "img12.jpg"
       ],
       [
-        "https://example.com/gallery/2_1.jpg",
-        "https://example.com/gallery/2_2.jpg",
-        "https://example.com/gallery/2_3.jpg",
-        "https://example.com/gallery/2_4.jpg",
-        "https://example.com/gallery/2_5.jpg",
-        "https://example.com/gallery/2_6.jpg"
+        "img13.jpg",
+        "img14.jpg",
+        "img15.jpg",
+        "img16.jpg",
+        "img17.jpg",
+        "img18.jpg"
+      ],
+      [
+        "img18.jpg",
+        "img19.jpg",
+        "img20.jpg",
+        "img21.jpg",
+        "img22.jpg",
+        "img23.jpg"
+      ],
+      [
+        "img23.jpg",
+        "img24.jpg",
+        "img25.jpg",
+        "img26.jpg",
+        "img27.jpg",
+        "img28.jpg"
       ]
     ],
     "isPremium": [
-      true,
-      false
-    ],
-    "isFavorite": [
       false,
       true
     ],
-    "ratings": [
-      1.0,
-      2.5,
-      3.8,
-      4.2,
-      5.0
+    "isFavorite": [
+      true,
+      false
     ],
-    "housingTypes": [
-      "Apartment",
-      "House",
-      "Room",
-      "Villa"
+    "ratings": [
+      4.5,
+      5,
+      4,
+      5,
+      4.2
+    ],
+    "apartmentTypes": [
+      "apartment",
+      "house",
+      "room",
+      "hotel"
     ],
     "roomCounts": [
-      1,
-      2,
       3,
+      2,
+      1,
       4,
-      5
+      2
     ],
     "guestCounts": [
-      1,
+      6,
+      4,
       2,
-      3,
+      8,
       4
     ],
     "costs": [
-      100,
-      150,
-      200,
+      180,
+      120,
       250,
-      300
+      400,
+      150
     ],
     "amenities": [
       [
-        "Wifi",
-        "Heating",
-        "Kitchen"
+        "Fridge",
+        "Breakfast",
+        "Washer"
       ],
       [
-        "TV",
-        "Parking",
-        "Pool"
+        "Breakfast",
+        "Washer"
       ],
       [
+        "Towels",
+        "Fridge",
+        "Air conditioning"
+      ],
+      [
+        "Baby seat",
+        "Laptop friendly workspace",
+        "Air conditioning"
+      ],
+      [
+        "Fridge",
         "Washer",
-        "Hair dryer",
-        "Iron"
+        "Baby seat"
       ]
     ],
     "authors": [
       {
-        "name": "Alice Johnson",
-        "email": "alice.johnson@example.com",
-        "avatarUrl": "https://example.com/avatars/alice.png"
+        "name": "Charlie",
+        "mail": "charlie@mail.ru",
+        "avatar": "charlie.jpg",
+        "password": "123",
+        "type": "обычный"
       },
       {
-        "name": "Bob Smith",
-        "email": "bob.smith@example.com",
-        "avatarUrl": "https://example.com/avatars/bob.png"
+        "name": "Alice",
+        "mail": "alice@mail.ru",
+        "avatar": "alice.jpg",
+        "password": "123",
+        "type": "обычный"
       },
       {
-        "name": "Carol White",
-        "email": "carol.white@example.com",
-        "avatarUrl": "https://example.com/avatars/carol.png"
+        "name": "Bob",
+        "mail": "bob@mail.ru",
+        "avatar": "bob.jpg",
+        "password": "123",
+        "type": "pro"
+      },
+      {
+        "name": "Diana",
+        "mail": "diana@mail.ru",
+        "avatar": "diana.jpg",
+        "password": "123",
+        "type": "pro"
+      },
+      {
+        "name": "Ethan",
+        "mail": "ethan@mail.ru",
+        "avatar": "ethan.jpg",
+        "password": "123",
+        "type": "pro"
       }
     ],
     "commentCounts": [
-      0,
-      1,
-      2,
-      5,
-      10
+      0
     ],
     "coordinates": [
       {
-        "latitude": 48.8566,
-        "longitude": 2.3522
+        "latitude": 50.938361,
+        "longitude": 6.959974
       },
       {
-        "latitude": 50.9375,
-        "longitude": 6.9603
+        "latitude": 48.85661,
+        "longitude": 2.351499
       },
       {
-        "latitude": 50.8503,
-        "longitude": 4.3517
+        "latitude": 52.370216,
+        "longitude": 4.895168
       },
       {
-        "latitude": 52.3676,
-        "longitude": 4.9041
+        "latitude": 50.846557,
+        "longitude": 4.351697
       },
       {
-        "latitude": 53.5511,
-        "longitude": 9.9937
+        "latitude": 53.550341,
+        "longitude": 10.000654
       },
       {
-        "latitude": 51.2277,
-        "longitude": 6.7735
+        "latitude": 51.225402,
+        "longitude": 6.776314
       }
     ]
   }

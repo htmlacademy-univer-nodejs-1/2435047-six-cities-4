@@ -39,11 +39,11 @@ export class GenerateCommand implements Command {
     try {
       await this.load(url);
       await this.write(filepath, offerCount);
-      await TSVFileWriter.close();  
+      await TSVFileWriter.close();
       console.info(`File ${filepath} was created!`);
     } catch (error) {
       console.error('Can\'t generate data');
-      console.error(getErrorMessage(error));
+      console.log(getErrorMessage(error));
     }
   }
 }

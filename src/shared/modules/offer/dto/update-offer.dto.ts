@@ -1,11 +1,7 @@
 import { IsOptional, MinLength, MaxLength, IsDateString, IsEnum, IsArray, ArrayMinSize, ArrayMaxSize, IsString, IsNumber, Min, Max, Validate, ArrayNotEmpty, IsIn } from 'class-validator';
 import { MaxDecimalPlaces } from '../../../helpers/validators.js';
 import { Amenity } from '../../../types/amenity.type.js';
-import {
-  AMENITY_VALUES,
-  ApartmentType,
-  TownType,
-} from '../../../types/index.js';
+import { AMENITY_VALUES, ApartmentType, TownType } from '../../../types/index.js';
 import { UpdateOfferValidationMessage } from './update-offer.messages.js';
 
 

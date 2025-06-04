@@ -1,9 +1,4 @@
-import {
-  defaultClasses,
-  getModelForClass,
-  modelOptions,
-  prop,
-} from '@typegoose/typegoose';
+import { defaultClasses, getModelForClass, modelOptions, prop } from '@typegoose/typegoose';
 
 export interface OfferEntity extends defaultClasses.Base { }
 

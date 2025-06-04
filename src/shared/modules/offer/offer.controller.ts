@@ -1,18 +1,9 @@
 import { inject, injectable } from 'inversify';
 import { Component } from '../../types/component.enum.js';
-import {
-  BaseController,
-  DocumentExistsMiddleware,
-  HttpMethod,
-} from '../../libs/rest/index.js';
+import { BaseController, DocumentExistsMiddleware, HttpMethod } from '../../libs/rest/index.js';
 import { Logger } from '../../libs/logger/index.js';
 import { Request, Response } from 'express';
-import {
-  CreateOfferDto,
-  OfferRdo,
-  OfferService,
-  OfferSummaryRdo,
-} from './index.js';
+import { CreateOfferDto, OfferRdo, OfferService, OfferSummaryRdo } from './index.js';
 import { fillDTO, getCoordinatesByTown } from '../../helpers/index.js';
 import { ParamsDictionary } from 'express-serve-static-core';
 import { UpdateOfferDto } from './dto/update-offer.dto.js';
